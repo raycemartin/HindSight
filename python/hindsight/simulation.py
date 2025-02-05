@@ -8,4 +8,3 @@ class Image:
         self.height = height
 
         self.img = np.zeros(self.width, self.height)
-
