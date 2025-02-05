@@ -1,0 +1,7 @@
+Sources:
+https://ams-osram.com/products/lasers/ir-lasers-vcsel/ams-belago
+https://www.holoor.co.il/structured-light-doe/
+https://paperswithcode.com/area/computer-vision
+https://www.elite-lasers.com/products/MachineVision/DiffractiveOpticalElementsDOELaserModule.html
+https://www.mdpi.com/1424-8220/23/1/13
+https://link.springer.com/chapter/10.1007/978-3-319-40379-3_33
