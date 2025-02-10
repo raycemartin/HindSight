@@ -23,7 +23,7 @@ class Camera:
 
 
 class Object:
-    def __init__(self,filename: str):
+    def __init__(self,filename: str, position: list, orientation: list):
         if not isinstance(filename, str):
             raise TypeError("The filename must be a string.")
 
@@ -45,7 +45,7 @@ class Object:
 duck_file = os.path.abspath("../../docs/Rubber_Duck.stl")
 
 
-duck = Object(duck_file)
+duck = Object(duck_file, [0,0,500], [0,0,0])
 
 Lcam = Camera(2560,960, 2.43, [-50,0,0], [0,0,0])
 Rcam = Camera(2560,960, 2.43, [50,0,0], [0,0,0])
