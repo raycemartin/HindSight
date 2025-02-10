@@ -5,14 +5,22 @@ import open3d as o3d
 import os
 
 class Camera:
+    """
+    Camera class for simulating each camera in a stereoscopic setup.
+    """
     def __init__(self, width, height, f, coordinate: list, orientation: list):
-        self.width = width
-        self.height = height
-        self.f = f
-        self.coordinate = coordinate
-        self.orientation = orientation
+        self.width = width              # width of the camera sensor in mm
+        self.height = height            # height of the camera sensor in mm
+        self.f = f                      # focal length of the camera lens
+        self.coordinate = coordinate    # coordinate position of the camera [x, y, z]
+        self.orientation = orientation  # orientation of the camera [Rx,Ry,Rz] in degrees
 
-        self.img = np.zeros(self.width, self.height)
+        self.img = np.zeros([self.width, self.height]) # creating blank image placeholder
+
+    def capture(self):
+        "will capture an image of the scene"
+        pass
+
 
 class Object:
     def __init__(self,filename: str):
@@ -21,10 +29,28 @@ class Object:
 
         self.mesh = o3d.io.read_triangle_mesh(filename)
 
+        # Check if the mesh is loaded correctly
+        if not self.mesh.is_empty():
+            print("STL file loaded successfully!")
+        else:
+            print("Failed to load STL file.")
+
+    def visualize(self):
+        # Compute vertex normals for better visualization
+        self.mesh.compute_vertex_normals()
+
+        # Visualize the 3D mesh
+        o3d.visualization.draw_geometries([self.mesh])
+
 duck_file = os.path.abspath("../../docs/Rubber_Duck.stl")
 
 
 duck = Object(duck_file)
+
+Lcam = Camera(2560,960, 2.43, [-50,0,0], [0,0,0])
+Rcam = Camera(2560,960, 2.43, [50,0,0], [0,0,0])
+
+#duck.visualize()
 
 if __name__ == "__main__":
     pass
