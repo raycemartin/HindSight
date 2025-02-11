@@ -15,10 +15,9 @@ class Camera:
         self.coordinate = coordinate    # coordinate position of the camera [x, y, z]
         self.orientation = orientation  # orientation of the camera [Rx,Ry,Rz] in degrees
 
-        self.img = np.zeros([self.width, self.height]) # creating blank image placeholder
-
     def capture(self):
         "will capture an image of the scene"
+        self.img = np.zeros([self.width, self.height])  # creating blank image placeholder
         pass
 
 
@@ -42,10 +41,21 @@ class Object:
         # Visualize the 3D mesh
         o3d.visualization.draw_geometries([self.mesh])
 
+    def to_point_cloud(self):
+        point_cloud = self.mesh.sample_points_uniformly(number_of_points=10000)  # Adjust the number of points as needed
+
+
+
+
+
+
 duck_file = os.path.abspath("../../docs/Rubber_Duck.stl")
 
 
 duck = Object(duck_file, [0,0,500], [0,0,0])
+pc = duck.to_point_cloud()
+
+print(type(pc))
 
 Lcam = Camera(2560,960, 2.43, [-50,0,0], [0,0,0])
 Rcam = Camera(2560,960, 2.43, [50,0,0], [0,0,0])
