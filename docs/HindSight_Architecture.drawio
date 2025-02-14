@@ -245,6 +245,9 @@
         <mxCell id="-bWUi9QBH4UZ2JZ-Sh4m-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-55" target="-bWUi9QBH4UZ2JZ-Sh4m-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="ys4roNAGNwg6VOZLlsAd-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J5v3IEzy5dfakS-TdsI3-55" target="ys4roNAGNwg6VOZLlsAd-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-55" value="Image" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="1010" width="100" height="60" as="geometry" />
         </mxCell>
@@ -380,6 +383,18 @@
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-7" value="Use plane wave reflection for &quot;ambient&quot; (low intensity) reflection and dot reflections for creating actual dots" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-370" y="640" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ys4roNAGNwg6VOZLlsAd-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ys4roNAGNwg6VOZLlsAd-10" target="sHHYE8ZNigiU5bJNncU3-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="1130" />
+              <mxPoint x="500" y="720" />
+              <mxPoint x="270" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ys4roNAGNwg6VOZLlsAd-10" value="Move Scanner" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1100" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
