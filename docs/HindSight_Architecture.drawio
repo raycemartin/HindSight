@@ -103,7 +103,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Kg6ONfjqluZQntInFgyU" name="Simulation Architecture">
-    <mxGraphModel dx="2278" dy="1713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="3718" dy="2768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,7 +123,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sHHYE8ZNigiU5bJNncU3-3" value="3D-&amp;gt;2D Projection" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="1310" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1317" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -276,7 +276,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-59" value="Project Laser" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="1210" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1218" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-60" value="" style="endArrow=baseDash;startArrow=baseDash;html=1;rounded=0;startFill=0;endFill=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -314,7 +314,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-84" value="Digitize Image" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="1510" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1513" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="WVqH8H1S47k0m4Q4rjzG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WVqH8H1S47k0m4Q4rjzG-1" target="WVqH8H1S47k0m4Q4rjzG-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -358,7 +358,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-1" value="Calculate reflection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="1400" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1415" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Assumptions &amp;amp; Simplifications&lt;/h1&gt;&lt;p&gt;Using perspective projections&lt;/p&gt;&lt;p&gt;Using monochromatic light&lt;/p&gt;&lt;p&gt;Assuming no lens distortion&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-700" y="240" width="390" height="120" as="geometry" />
@@ -415,7 +415,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sHHYE8ZNigiU5bJNncU3-5" value="Append to Image metadata" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="1610" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1612" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-33" value="Needed for creating 3D model. Needed to stitch points together." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=bottom;" vertex="1" parent="1">
           <mxGeometry x="290" y="1250" width="130" height="80" as="geometry" />
