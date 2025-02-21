@@ -141,7 +141,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Kg6ONfjqluZQntInFgyU" name="Simulation Architecture">
-    <mxGraphModel dx="2912" dy="2178" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2222" dy="1672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -240,7 +240,7 @@
         <mxCell id="ys4roNAGNwg6VOZLlsAd-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-35" target="ys4roNAGNwg6VOZLlsAd-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="J5v3IEzy5dfakS-TdsI3-35" value="Import Object" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="J5v3IEzy5dfakS-TdsI3-35" value="Import Object" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-350" y="680" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-36" target="ys4roNAGNwg6VOZLlsAd-10" edge="1">
@@ -264,7 +264,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-38" value="STL File" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
-          <mxGeometry x="-410" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="-350" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="J5v3IEzy5dfakS-TdsI3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-41" target="J5v3IEzy5dfakS-TdsI3-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -342,12 +342,6 @@
         <mxCell id="J5v3IEzy5dfakS-TdsI3-72" value="Point&lt;div&gt;Cloud&lt;/div&gt;" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="60" y="2340" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="J5v3IEzy5dfakS-TdsI3-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-77" target="J5v3IEzy5dfakS-TdsI3-35" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="J5v3IEzy5dfakS-TdsI3-77" value="Object Position" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
-          <mxGeometry x="-270" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="J5v3IEzy5dfakS-TdsI3-84" target="sHHYE8ZNigiU5bJNncU3-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -368,7 +362,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="WVqH8H1S47k0m4Q4rjzG-2" value="Define Laser" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="WVqH8H1S47k0m4Q4rjzG-2" value="Define Laser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-110" y="680" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="WVqH8H1S47k0m4Q4rjzG-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WVqH8H1S47k0m4Q4rjzG-7" target="WVqH8H1S47k0m4Q4rjzG-8" edge="1">
@@ -408,7 +402,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ys4roNAGNwg6VOZLlsAd-4" value="Compute Object Normals" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ys4roNAGNwg6VOZLlsAd-4" value="Compute Object Normals" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-350" y="880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ys4roNAGNwg6VOZLlsAd-7" target="ys4roNAGNwg6VOZLlsAd-1" edge="1">
@@ -428,8 +422,8 @@
         <mxCell id="ys4roNAGNwg6VOZLlsAd-10" value="Position Scanner" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="50" y="1120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ys4roNAGNwg6VOZLlsAd-18" value="Create Point Cloud" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-350" y="770" width="120" height="60" as="geometry" />
+        <mxCell id="ys4roNAGNwg6VOZLlsAd-18" value="Create Point Cloud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-350" y="780" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ys4roNAGNwg6VOZLlsAd-24" target="sHHYE8ZNigiU5bJNncU3-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -484,6 +478,12 @@
         </mxCell>
         <mxCell id="ys4roNAGNwg6VOZLlsAd-45" value="Position Point Cloud in World Coordinates" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="50" y="2450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pQCx6a-4eRL3wrsgHKTB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pQCx6a-4eRL3wrsgHKTB-1" target="J5v3IEzy5dfakS-TdsI3-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pQCx6a-4eRL3wrsgHKTB-1" value="Camera Position" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="390" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
