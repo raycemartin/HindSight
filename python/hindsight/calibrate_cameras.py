@@ -27,7 +27,9 @@ class Camera:
         self.imgpoints = []
 
     def calibrate(self):
-        ### Calibration ###
+        """
+        Calibrate a camera using calibration images of a chessboard of a chosen size.
+        """
         current_directory = os.getcwd()
 
         size_of_target = (7 * 5, 3)
@@ -40,20 +42,22 @@ class Camera:
         objp[:, :2] = np.mgrid[0:7, 0:5].T.reshape(-1, 2)
 
         # arrays to store object points and image points from all the images
-        objpoints = []  # 3d points in real space
-        imgpoints = []  # 2d points in real space
+        objpoints = []                                      # 3d points in real space
+        imgpoints = []                                      # 2d points in real space
 
+        # grabbing all the calibration images for the camera
         images = glob.glob(str(current_directory) + '/calibration_images/' + self.name + '_camera/*.png')
 
+        #
         for fname in images:
 
-            img = cv2.imread(fname)
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            img = cv2.imread(fname)                         # reading in image N
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    # converting it to grayscale
 
             # find the chess board corners
             ret, corners = cv2.findChessboardCorners(gray, (7, 5), None)
 
-            # if found, add object points, image poinrts (after refining them)
+            # if found, add object points, image points (after refining them)
             if ret == True:
                 print(fname)
                 objpoints.append(objp)
