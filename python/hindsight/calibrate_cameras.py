@@ -15,6 +15,8 @@ import time
 import os
 import glob
 
+from debugpy.common.timestamp import current
+
 
 class Camera:
     def __init__(self, name):
@@ -46,7 +48,12 @@ class Camera:
         imgpoints = []                                      # 2d points in real space
 
         # grabbing all the calibration images for the camera
-        images = glob.glob(str(current_directory) + '/calibration_images/' + self.name + '_camera/*.png')
+        images = glob.glob(str(current_directory) + '/calibration_images/cal_' + self.name + '_img_*.png')
+
+        # Check if images exist
+        if not images:
+            print(f"Error: No calibration images found for '{self.name}' camera.")
+            return
 
         #
         for fname in images:
@@ -58,17 +65,19 @@ class Camera:
             ret, corners = cv2.findChessboardCorners(gray, (7, 5), None)
 
             # if found, add object points, image points (after refining them)
-            if ret == True:
-                print(fname)
+            if ret:
+                print(f"Processing {fname}...")
                 objpoints.append(objp)
 
-                corners2 = cv2.cornerSubPix(gray, corners, (11, 11), (-1, -1), criteria)
+                corners2 = cv2.cornerSubPix(gray, corners, (9, 9), (-1, -1), criteria)
                 imgpoints.append(corners2)
 
                 # draw and display corners
                 cv2.drawChessboardCorners(img, (7, 5), corners2, ret)
                 cv2.imshow('img', img)
                 cv2.waitKey(500)
+            else:
+                print(f"Chessboard not detected in {fname}.")
 
         cv2.destroyAllWindows()
         self.camera_params = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None,
@@ -82,11 +91,13 @@ class Camera:
     def undistort(self, img):
         h, w = img.shape[:2]
 
-        undstorted = cv2.undistort(img, self.camera_params[1], self.camera_params[2], None, self.camera_matrix)
+        undistorted = cv2.undistort(img, self.camera_params[1], self.camera_params[2], None, self.camera_matrix)
 
         x, y, w, h = self.roi
-        undstorted = undstorted[y:y + h, x:x + w]
-        cv2.imshow('Undistorted Image', undstorted)
+        undistorted = undistorted[y:y + h, x:x + w]
+        cv2.imshow('Undistorted Image', undistorted)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
 
 def take_images():
@@ -95,13 +106,13 @@ def take_images():
     if not os.path.exists(new_directory):
         os.makedirs(new_directory)
 
-    s = 0
+    s = 1
     if len(sys.argv) > 1:
-        s = sys.argv[1]
-
-    i = 1
+        s = sys.argv[4]
     source = cv2.VideoCapture(s)
 
+
+    i = 1
     while cv2.waitKey(1) != 27:  # Escape to exit
         has_frame, frame = source.read()
         frame = cv2.flip(frame, 0)
@@ -154,7 +165,7 @@ def stereo_rect():
     Right_Stereo_Map = cv2.initUndistortRectifyMap(new_mtxR, distR, rect_r, proj_mat_r,
                                                    gray.shape[::-1], cv2.CV_16SC2)
 
-    print("Saving paraeters ......")
+    print("Saving parameters ......")
     cv_file = cv2.FileStorage("improved_params2.xml", cv2.FILE_STORAGE_WRITE)
     cv_file.write("Left_Stereo_Map_x", Left_Stereo_Map[0])
     cv_file.write("Left_Stereo_Map_y", Left_Stereo_Map[1])
@@ -163,8 +174,8 @@ def stereo_rect():
     cv_file.release()
     print("Done")
 
-    imgL = cv2.imread(r'calibration_images/left_camera/cal_left_img_20.png')
-    imgR = cv2.imread(r'calibration_images/right_camera/cal_right_img_20.png')
+    imgL = cv2.imread(r'calibration_images/cal_left_img_20.png')
+    imgR = cv2.imread(r'calibration_images/cal_right_img_20.png')
 
     cv2.imshow("Left image before rectification", imgL)
     cv2.imshow("Right image before rectification", imgR)
@@ -174,7 +185,7 @@ def stereo_rect():
 
     cv2.imshow("Left image after rectification", Left_nice)
     cv2.imshow("Right image after rectification", Right_nice)
-    # cv2.waitKey(0)
+    cv2.waitKey(0)
 
     out = Right_nice.copy()
     out[:, :, 0] = Right_nice[:, :, 0]
@@ -182,8 +193,8 @@ def stereo_rect():
     out[:, :, 2] = Left_nice[:, :, 2]
 
     cv2.imshow("Output image", out)
-    # cv2.waitKey(0)
-
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 # ret, mtx, dist, rvecs, tvecs = calibrate()
 
@@ -191,7 +202,8 @@ def stereo_rect():
 if __name__ == '__main__':
     left_camera = Camera('left')
     right_camera = Camera('right')
-    # take_images()
+    #take_images()
     left_camera.calibrate()
     right_camera.calibrate()
-    stereo_rect()
+    left_camera.undistort(cv2.imread(r'calibration_images/cal_left_img_20.png'))
+    #stereo_rect()
