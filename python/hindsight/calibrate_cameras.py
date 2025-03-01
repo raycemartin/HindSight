@@ -202,8 +202,8 @@ def stereo_rect():
 if __name__ == '__main__':
     left_camera = Camera('left')
     right_camera = Camera('right')
-    #take_images()
-    left_camera.calibrate()
-    right_camera.calibrate()
-    left_camera.undistort(cv2.imread(r'calibration_images/cal_left_img_20.png'))
+    take_images()
+    #left_camera.calibrate()
+    #right_camera.calibrate()
+    #left_camera.undistort(cv2.imread(r'calibration_images/cal_left_img_20.png'))
     #stereo_rect()
