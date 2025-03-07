@@ -1,1 +1,2 @@
-printf '*.jpg\n*.jpeg\n*.png\n*.gif\n' >> .gitignore
+# Ignore all PNG files
+*.png
